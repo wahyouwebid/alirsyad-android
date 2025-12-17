@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <RadioButton
+        android:id="@+id/rb_answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Ikan"
+        android:gravity="center_vertical"
+        android:textColor="@color/neutral_90"
+        android:textSize="@dimen/_14ssp"
+        android:paddingTop="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="@dimen/_0sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center_vertical"
+            android:textColor="@color/neutral_80"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toStartOf="@+id/iv_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="BAB 1 - Bilangan Cacah 0 Sampai 20" />
+
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_rectangle"
+            android:layout_marginEnd="@dimen/_8sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/title_image" />
+        <View
+            android:id="@+id/view"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:background="@color/grey_10"
+            android:layout_marginTop="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="@+id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <net.cachapa.expandablelayout.ExpandableLayout
+        android:id="@+id/el_sub"
+        android:layout_width="@dimen/_0sdp"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:el_duration="100"
+        app:el_expanded="false"
+        app:el_parallax="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </net.cachapa.expandablelayout.ExpandableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

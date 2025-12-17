@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/neutral_10</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="backgroundTint">@color/transparent</item>
+    </style>
+
+    <!--  FILL  -->
+
+    <style name="Button.Fill" />
+
+    <style name="Button.Fill.Primary">
+        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="Button.Fill.Primary.Small">
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:textAppearance">@style/Text.Sm.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.Primary.Medium">
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:textAppearance">@style/Text.Base.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.Primary.Large">
+        <item name="android:paddingTop">@dimen/_20sdp</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_30sdp</item>
+        <item name="android:paddingStart">@dimen/_30sdp</item>
+        <item name="android:textAppearance">@style/Text.Sbase.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.Grey">
+        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="backgroundTint">@color/neutral_60</item>
+    </style>
+
+    <style name="Button.Fill.Grey.Small">
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:textAppearance">@style/Text.Sm.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.Grey.Medium">
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:textAppearance">@style/Text.Base.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.Grey.Large">
+        <item name="android:paddingTop">@dimen/_20sdp</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_30sdp</item>
+        <item name="android:paddingStart">@dimen/_30sdp</item>
+        <item name="android:textAppearance">@style/Text.Sbase.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.Red">
+        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="backgroundTint">@color/state_color_red</item>
+    </style>
+
+    <style name="Button.Fill.Red.Small">
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:textAppearance">@style/Text.Sm.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.Red.Medium">
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:textAppearance">@style/Text.Base.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.Red.Large">
+        <item name="android:paddingTop">@dimen/_20sdp</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_30sdp</item>
+        <item name="android:paddingStart">@dimen/_30sdp</item>
+        <item name="android:textAppearance">@style/Text.Sbase.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.White">
+        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="backgroundTint">@color/neutral_10</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Button.Fill.White.Small">
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:textAppearance">@style/Text.Sm.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.White.Medium">
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:textAppearance">@style/Text.Base.SemiBold</item>
+    </style>
+
+    <style name="Button.Fill.White.Large">
+        <item name="android:paddingTop">@dimen/_20sdp</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_30sdp</item>
+        <item name="android:paddingStart">@dimen/_30sdp</item>
+        <item name="android:textAppearance">@style/Text.Sbase.SemiBold</item>
+    </style>
+
+    <!--  BORDER  -->
+
+    <style name="Button.Border" parent="Widget.MaterialComponents.Button.OutlinedButton" />
+
+    <style name="Button.Border.Primary">
+        <item name="strokeColor">@color/colorPrimary</item>
+        <item name="strokeWidth">@dimen/_2sdp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="cornerRadius">@dimen/_10sdp</item>
+    </style>
+
+    <style name="Button.Border.Primary.Small">
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:textAppearance">@style/Text.Sm.SemiBold</item>
+    </style>
+
+    <style name="Button.Border.Primary.Medium">
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:textAppearance">@style/Text.Base.SemiBold</item>
+    </style>
+
+    <style name="Button.Border.Primary.Large">
+        <item name="android:paddingTop">@dimen/_20sdp</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_30sdp</item>
+        <item name="android:paddingStart">@dimen/_30sdp</item>
+        <item name="android:textAppearance">@style/Text.Sbase.SemiBold</item>
+    </style>
+
+    <!--  TEXT  -->
+
+    <style name="Button.Text" parent="Widget.MaterialComponents.Button.TextButton" />
+
+    <style name="Button.Text.PrimaryLighter">
+        <item name="android:textColor">@color/colorPrimaryLighter</item>
+    </style>
+
+    <style name="Button.Text.PrimaryLighter.Small">
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:textAppearance">@style/Text.Sm.SemiBold</item>
+    </style>
+
+    <style name="Button.Text.PrimaryLighter.Medium">
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:textAppearance">@style/Text.Base.SemiBold</item>
+    </style>
+
+    <style name="Button.Text.PrimaryLighter.Large">
+        <item name="android:paddingTop">@dimen/_20sdp</item>
+        <item name="android:paddingBottom">@dimen/_20sdp</item>
+        <item name="android:paddingEnd">@dimen/_30sdp</item>
+        <item name="android:paddingStart">@dimen/_30sdp</item>
+        <item name="android:textAppearance">@style/Text.Sbase.SemiBold</item>
+    </style>
+
+    <!--  UNELEVATED  -->
+
+    <style name="Button.Unelevated" parent="Widget.MaterialComponents.Button.UnelevatedButton" >
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="Button.Unelevated.White">
+        <item name="cornerRadius">@dimen/_10sdp</item>
+        <item name="backgroundTint">@color/neutral_10</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Button.Unelevated.White.Small">
+        <item name="android:paddingTop">@dimen/_8sdp</item>
+        <item name="android:paddingBottom">@dimen/_8sdp</item>
+        <item name="android:paddingEnd">@dimen/_10sdp</item>
+        <item name="android:paddingStart">@dimen/_10sdp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+
+    </style>
+
+    <style name="Button.Unelevated.White.Medium">
+        <item name="android:paddingTop">@dimen/_16sdp</item>
+        <item name="android:paddingBottom">@dimen/_16sdp</item>
+        <item name="android:paddingEnd">@dimen/_20sdp</item>
+        <item name="android:paddingStart">@dimen/_20sdp</item>
+        <item name="android:fontFamily">@font/poppins_semi_bold</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+</resources>

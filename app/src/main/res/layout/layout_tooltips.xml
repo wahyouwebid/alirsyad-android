@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toast_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_check"
+            android:layout_width="@dimen/_115sdp"
+            android:layout_height="@dimen/_59sdp"
+            android:background="@drawable/tooltips"
+            android:contentDescription="@string/title_content_description" />
+
+        <TextView
+            android:id="@+id/tv_tooltips"
+            android:layout_width="@dimen/_115sdp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginTop="@dimen/_9sdp"
+            android:gravity="center"
+            android:text="@string/title_tooltips_achievment"/>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

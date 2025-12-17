@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingTop="@dimen/_20sdp"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp">
+
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="@dimen/_5sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:rcAnimationEnable="true"
+        app:rcAnimationSpeedScale="1"
+        app:rcBackgroundPadding="@dimen/_1sdp"
+        app:rcBackgroundColor="@color/state_color_orange_light"
+        app:rcMax="100"
+        app:rcProgress="50"
+        app:rcProgressColor="@color/state_color_orange"
+        app:rcRadius="@dimen/_30sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

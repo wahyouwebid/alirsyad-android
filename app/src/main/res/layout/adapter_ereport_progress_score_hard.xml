@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:text="@string/title_hard"
+        android:textSize="@dimen/_12ssp"
+        android:textColor="@color/neutral_90"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_extra_bold"
+        tools:text="20/100"
+        android:textColor="@color/state_color_red"
+        android:textSize="@dimen/_14ssp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_questions"
+        app:layout_constraintEnd_toStartOf="@+id/tv_label_questions"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_questions" />
+
+    <TextView
+        android:id="@+id/tv_label_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/title_question"
+        android:textColor="@color/neutral_80"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_label" />
+
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="@dimen/_0sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_label"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label"
+        app:rcAnimationEnable="true"
+        app:rcAnimationSpeedScale="1"
+        app:rcBackgroundPadding="@dimen/_1sdp"
+        app:rcBackgroundColor="@color/state_color_red_light"
+        app:rcMax="100"
+        app:rcProgress="0"
+        app:rcProgressColor="@color/state_color_red"
+        app:rcRadius="@dimen/_30sdp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

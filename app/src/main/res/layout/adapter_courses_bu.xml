@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/cardWithStroke"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_16sdp"
+    android:layout_marginEnd="@dimen/_16sdp"
+    android:layout_marginBottom="@dimen/_16sdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_margin="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius="@dimen/_8sdp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:fontFamily="@font/semibold"
+        android:textSize="@dimen/_20ssp"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/iv_thumbnail"
+        tools:text="Matematika" />
+
+    <TextView
+        android:id="@+id/tv_description"
+        style="@style/textLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:fontFamily="@font/light"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        tools:text="Kelas 1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

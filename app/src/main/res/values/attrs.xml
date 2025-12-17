@@ -1,0 +1,54 @@
+<resources>
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="AutoGridLayout">
+        <attr name="columnWidth" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="RoundedView">
+        <attr name="topLeftCornerRadius" format="dimension" />
+        <attr name="topRightCornerRadius" format="dimension" />
+        <attr name="bottomLeftCornerRadius" format="dimension" />
+        <attr name="bottomRightCornerRadius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="DibButtonView">
+        <attr name="type" format="string" />
+        <attr name="title" format="string" />
+        <attr name="background" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="DibEditText">
+        <attr name="titleHeader" format="string" />
+        <attr name="titleHint" format="string" />
+        <attr name="titleError" format="string" />
+        <attr name="isPassword" format="boolean" />
+        <attr name="android:inputType" />
+        <attr name="android:maxLength" />
+    </declare-styleable>
+
+    <declare-styleable name="DibRadioButton">
+        <attr name="titleRadioText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DibSpinner">
+        <attr name="titleHeaderSpinner" format="string" />
+        <attr name="titleSpinner" format="string" />
+        <attr name="titleErrorSpinner" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DibEditTextDisable">
+        <attr name="titleHeaderText" format="string" />
+        <attr name="titleText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DibButtonPrimary">
+        <attr name="buttonText" format="string" />
+        <attr name="buttonType" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="DibLoading">
+        <attr name="loadingType" format="string" />
+    </declare-styleable>
+</resources>

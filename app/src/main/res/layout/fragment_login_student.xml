@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_login_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_16sdp"
+        android:paddingEnd="@dimen/_16sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:drawablePadding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/state_color_red"
+        android:visibility="gone"
+        android:text="@string/title_error_login_student"
+        android:background="@drawable/bg_card_red_stroke"
+        app:drawableStartCompat="@drawable/ic_information"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.alirsyad.app.component.editext.DibEditText
+        android:id="@+id/et_nis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:inputType="number"
+        android:maxLength="10"
+        app:isPassword="false"
+        app:titleHint="@string/title_form_hint_nis"
+        app:titleHeader="@string/title_form_nis"
+        app:layout_constraintTop_toBottomOf="@+id/tv_login_error"/>
+
+    <com.alirsyad.app.component.editext.DibEditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:inputType="textPassword"
+        app:titleHint="@string/title_form_hint_nis_password"
+        app:titleHeader="@string/title_password"
+        app:isPassword="true"
+        app:layout_constraintTop_toBottomOf="@+id/et_nis"/>
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/title_forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_16sdp"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <com.alirsyad.app.component.button.DibButton
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:buttonType="primary"
+        app:buttonText="@string/title_login"
+        app:layout_constraintTop_toBottomOf="@+id/tv_forgot_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_34sdp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/neutral_60"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:textColor="@color/neutral_50"
+            android:text="@string/title_login_or"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"
+            android:layout_marginTop="2dp"
+            android:background="@color/neutral_60"/>
+    </LinearLayout>
+
+    <com.alirsyad.app.component.button.DibButton
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_30sdp"
+        app:buttonType="outline"
+        app:buttonText="@string/title_register_visitor"
+        app:layout_constraintTop_toBottomOf="@+id/ll_or"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <com.alirsyad.app.component.customview.DibLoading
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

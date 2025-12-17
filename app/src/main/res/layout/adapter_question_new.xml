@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/_20sdp"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/neutral_90"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zanvent.mathview.MathView
+        android:id="@+id/tv_title_math"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/neutral_90"
+        android:textSize="@dimen/_14ssp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_165sdp"
+        android:scaleType="fitCenter"
+        app:riv_corner_radius_top_left="@dimen/_10sdp"
+        app:riv_corner_radius_bottom_left="@dimen/_10sdp"
+        app:riv_corner_radius_bottom_right="@dimen/_10sdp"
+        app:riv_corner_radius_top_right="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:maxHeight="@dimen/_165sdp"
+        app:layout_constraintDimensionRatio="H,3:2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:riv_corner_radius="@dimen/_5sdp"/>
+
+    <com.alirsyad.app.component.radiobutton.DibRadioAnswerNew
+        android:id="@+id/dib_answer_a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <com.alirsyad.app.component.radiobutton.DibRadioAnswerNew
+        android:id="@+id/dib_answer_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <com.alirsyad.app.component.radiobutton.DibRadioAnswerNew
+        android:id="@+id/dib_answer_c"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <com.alirsyad.app.component.radiobutton.DibRadioAnswerNew
+        android:id="@+id/dib_answer_d"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <com.alirsyad.app.component.radiobutton.DibRadioAnswerNew
+        android:id="@+id/dib_answer_e"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red_400"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:text="Oops! don't let this answer empty"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_10"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/rg_answer"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</LinearLayout>

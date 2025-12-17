@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.main.bu.simulation.SimulationFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_toolbar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:text="@string/title_courses"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18ssp" />
+
+                <TextView
+                    android:id="@+id/tv_title_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/light"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    tools:text="Kelas 1" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0sdp"
+        android:background="@drawable/bg_white_top_rounded"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_search"
+                style="@style/searchStroke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                android:autofillHints="search"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="@dimen/_8sdp"
+                android:enabled="true"
+                android:fontFamily="@font/regular"
+                android:hint="@string/learn_today"
+                android:inputType="text"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingEnd="@dimen/_16sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:textColorHint="#7F7F7F"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="@dimen/_5sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_24sdp"
+                            android:background="@drawable/bg_button_rounded"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/tv_course_in_progress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:fontFamily="@font/semibold"
+                            android:text="@string/title_course_in_progress"
+                            android:textSize="@dimen/_16ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/view2"
+                            app:layout_constraintStart_toEndOf="@+id/view2"
+                            app:layout_constraintTop_toTopOf="@+id/view2" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_courses_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_course_in_progress" />
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/sh_courses_in_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_course_in_progress">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <include
+                                        layout="@layout/place_holder_course_list"
+                                        tools:ignore="TooDeepLayout" />
+
+                                    <include layout="@layout/place_holder_course_list" />
+
+                                    <include layout="@layout/place_holder_course_list" />
+
+                                    <include layout="@layout/place_holder_course_list" />
+
+                                    <include layout="@layout/place_holder_course_list" />
+
+                                </LinearLayout>
+                            </ScrollView>
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/cl_no_data_in_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_course_in_progress">
+
+                            <com.airbnb.lottie.LottieAnimationView
+                                android:id="@+id/emptyInProgress"
+                                android:layout_width="@dimen/_200sdp"
+                                android:layout_height="@dimen/_150sdp"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:visibility="visible"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:lottie_autoPlay="true"
+                                app:lottie_loop="true"
+                                app:lottie_rawRes="@raw/empty" />
+
+                            <TextView
+                                android:layout_width="@dimen/_0sdp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="center"
+                                android:text="@string/title_no_data_module"
+                                android:textSize="@dimen/_16ssp"
+                                app:layout_constraintEnd_toEndOf="@+id/emptyInProgress"
+                                app:layout_constraintStart_toStartOf="@+id/emptyInProgress"
+                                app:layout_constraintTop_toBottomOf="@+id/emptyInProgress" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

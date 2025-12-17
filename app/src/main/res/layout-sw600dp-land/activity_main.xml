@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fragment_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_70sdp"
+        app:layout_constraintBottom_toTopOf="@+id/viewNavigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/viewNavigation"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="0dp"
+        app:fabCradleRoundedCornerRadius="0dp"
+        app:titleMargin="15dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_70sdp"
+                android:gravity="center_vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <!-- Home Menu -->
+                <LinearLayout
+                    android:id="@+id/menu_home"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:id="@+id/iv_home"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:src="@drawable/ic_home"
+                        android:contentDescription="@string/title_home" />
+
+                    <TextView
+                        android:id="@+id/tv_home"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#9AB39A"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@string/title_home"/>
+                </LinearLayout>
+
+                <!-- Subject Menu -->
+                <LinearLayout
+                    android:id="@+id/menu_subject"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:id="@+id/iv_subject"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:src="@drawable/ic_subject_new"
+                        android:contentDescription="@string/title_subject" />
+
+                    <TextView
+                        android:id="@+id/tv_subject_menu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#9AB39A"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@string/title_subject"/>
+                </LinearLayout>
+
+                <!-- Empty Space for FAB -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                </LinearLayout>
+
+                <!-- Achieve Menu -->
+                <LinearLayout
+                    android:id="@+id/menu_achieve"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:id="@+id/iv_achieve"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:src="@drawable/ic_achieve"
+                        android:contentDescription="@string/title_achieve" />
+
+                    <TextView
+                        android:id="@+id/tv_achieve"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#9AB39A"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@string/title_achieve"/>
+                </LinearLayout>
+
+                <!-- Profile Menu -->
+                <LinearLayout
+                    android:id="@+id/menu_profile"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="1dp"
+                    android:gravity="center_horizontal"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless">
+
+                    <ImageView
+                        android:id="@+id/iv_profile"
+                        android:layout_width="@dimen/_28sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:src="@drawable/ic_profile"
+                        android:contentDescription="@string/title_profile" />
+
+                    <TextView
+                        android:id="@+id/tv_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#9AB39A"
+                        android:textSize="@dimen/_18ssp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@string/title_profile"/>
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:layout_gravity="bottom|center_horizontal"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <TextView
+                    android:id="@+id/tv_subject"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/title_e_report"
+                    android:textSize="@dimen/_18ssp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/colorAccentDark"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/title_content_description"
+        android:scaleType="center"
+        app:backgroundTint="@color/white"
+        android:src="@drawable/ic_subject"
+        app:maxImageSize="@dimen/_65sdp"
+        android:layout_marginBottom="@dimen/_32sdp"
+        app:layout_anchor="@id/bottom_app_bar"
+        app:tint="@null" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mt_toolbar_sub_features"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_toolbar_sub_feature">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_75sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_32sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:paddingStart="@dimen/_13sdp"
+            android:paddingTop="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingBottom="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/title_content_description"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+            app:layout_constraintEnd_toStartOf="@+id/switch_bab"
+            app:layout_constraintStart_toEndOf="@+id/iv_back"
+            app:layout_constraintTop_toTopOf="@+id/iv_back"
+            tools:text="Siswa 1" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="@dimen/_28sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:background="@drawable/ic_drop_down_pdf"
+            android:backgroundTint="@color/white"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            android:contentDescription="@string/title_content_description"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_bab"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"
+            app:layout_constraintEnd_toStartOf="@+id/iv_more"
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            app:thumbTint="@drawable/switch_thumb_selector"
+            app:trackTint="@drawable/switch_track_selector" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.appbar.MaterialToolbar>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_white"
+    android:paddingBottom="@dimen/_16sdp">
+
+    <ProgressBar
+        android:id="@+id/pg_loading"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_margin="@dimen/_16sdp"
+        android:indeterminateTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/_7sdp"
+        android:fontFamily="@font/regular"
+        android:text="@string/loading"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/pg_loading"
+        app:layout_constraintStart_toStartOf="@+id/pg_loading"
+        app:layout_constraintTop_toBottomOf="@+id/pg_loading" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

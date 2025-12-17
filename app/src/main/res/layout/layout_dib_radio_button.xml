@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.zanvent.mathview.MathView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_vertical"
+        android:textColor="@color/neutral_90"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_140sdp"
+        android:scaleType="fitCenter"
+        android:maxWidth="@dimen/_340sdp"
+        android:maxHeight="@dimen/_140sdp"
+        android:visibility="gone"
+        app:riv_corner_radius_top_left="@dimen/_10sdp"
+        app:riv_corner_radius_bottom_left="@dimen/_10sdp"
+        app:riv_corner_radius_bottom_right="@dimen/_10sdp"
+        app:riv_corner_radius_top_right="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/title_content_description"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

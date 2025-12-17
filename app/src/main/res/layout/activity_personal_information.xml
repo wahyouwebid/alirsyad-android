@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.personalinformation.PersonalInformationActivity">
+
+    <com.alirsyad.app.component.toolbar.DibToolbarSubFeatures
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.alirsyad.app.component.editext.DibEditTextDisable
+        android:id="@+id/dib_nis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:titleHeaderText="@string/title_form_nis"
+        tools:titleText="NIS"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
+    <com.alirsyad.app.component.editext.DibEditTextDisable
+        android:id="@+id/dib_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleHeaderText="@string/title_form_fullname"
+        app:titleText="@string/title_form_fullname"
+        app:layout_constraintTop_toBottomOf="@+id/dib_nis"/>
+
+    <com.alirsyad.app.component.editext.DibEditTextDisable
+        android:id="@+id/dib_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleHeaderText="@string/title_password"
+        app:titleText="@string/title_password"
+        app:layout_constraintTop_toBottomOf="@+id/dib_full_name"/>
+
+    <com.alirsyad.app.component.editext.DibEditTextDisable
+        android:id="@+id/dib_active_class"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleHeaderText="@string/title_class"
+        app:titleText="@string/title_class"
+        app:layout_constraintTop_toBottomOf="@+id/dib_password"/>
+
+    <com.alirsyad.app.component.customview.DibLoading
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

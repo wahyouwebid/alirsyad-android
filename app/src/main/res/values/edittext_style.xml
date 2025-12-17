@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox" >
+        <item name="boxStrokeColor">@color/neutral_60</item>
+        <item name="boxStrokeWidth">@dimen/_2sdp</item>
+        <item name="boxStrokeWidthFocused">@dimen/_2sdp</item>
+        <item name="boxStrokeErrorColor">@color/state_color_red</item>
+        <item name="android:radius">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopStart">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/_10sdp</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/_10sdp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.webkit.PermissionRequest" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:node="remove"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:node="remove"/>
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DigitalInteractiveBook"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ui.learning.learningadaptive.level.LevelAdaptiveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.learning.learningadaptive.video.PlayVideoPreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.learning.learningadaptive.preview.PreviewAdaptiveLearningActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.changedpassword.ChangedPasswordActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.ereportscore.EReportScoreActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ui.learning.learningadaptive.detail.DetailLearningAdaptiveActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".ui.learning.learningadaptive.question.QuestionAdaptiveActivity"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity android:name=".ui.learning.learningadaptive.LearningAdaptiveActivity" />
+        <activity android:name=".ui.subjectsummary.SubjectSummaryActivity" />
+        <activity android:name=".ui.privacyandpolicy.PrivacyAndPolicyActivity" />
+        <activity android:name=".ui.personalinformation.PersonalInformationActivity" />
+        <activity
+            android:name=".ui.resetpassword.ResetPasswordActivity"
+            android:exported="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="userdev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/password/reset" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/password/reset" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dib.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/password/reset" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="user.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/password/reset" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.verifysuccess.SuccessVerifyAccountActivity"
+            android:exported="true"
+            android:noHistory="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/verify-email" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dib.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/verify-email" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="user.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/verify-email" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="userdev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/verify-email" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.forgotpassword.ForgotPasswordVisitorActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.forgotpassword.ForgotPasswordStudentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.learning.learningsimulation.detail.DetailLearningSimulationActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dib.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="open.my.game" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dib.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="open.my.game" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dib.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="module" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="module" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="open.my.game" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="module" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dib.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="app" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="app" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="open.my.game" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="app" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="userdev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="app" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="user.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/simulasi" />
+                <data android:scheme="app" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.game.PlaySimulationActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.learning.learningvideo.detail.DetailLearningVideoActivity"
+            android:exported="true">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dib.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/video" />
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/video" />
+                <data android:scheme="http" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dib.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/video" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="dev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/video" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="userdev.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/video" />
+                <data android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:host="user.alirsyadbandung.sch.id" />
+                <data android:pathPrefix="/video" />
+                <data android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.pdfview.PdfViewActivity" />
+        <activity android:name=".ui.updatesubject.UpdateSubjectActivity" />
+        <activity android:name=".ui.register.RegisterActivity" />
+        <activity android:name=".ui.intro.IntroActivity" />
+        <activity android:name=".ui.learning.learningmodule.detail.DetailLearningModuleActivity" />
+        <activity android:name=".ui.learning.learningmodule.detail.DetailLearningModuleWebviewActivity" />
+        <activity android:name=".ui.learning.learningvideo.LearningVideoActivity" />
+        <activity android:name=".ui.learning.learningmodule.LearningModuleActivity" />
+        <activity android:name=".ui.learning.learningsimulation.LearningSimulationActivity" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.login.LoginActivity" />
+        <activity
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

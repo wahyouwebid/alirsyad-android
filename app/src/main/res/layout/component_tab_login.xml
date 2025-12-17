@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.login.LoginActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_student"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_tab_login_selected"
+        app:layout_constraintEnd_toStartOf="@+id/cl_visitor">
+
+        <TextView
+            android:id="@+id/tv_tab_student"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/colorAccentDark"
+            android:text="@string/title_tab_login_student"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/view_student"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorAccentDark"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tab_student"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_visitor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cl_student">
+
+        <TextView
+            android:id="@+id/tv_tab_visitor"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/neutral_70"
+            android:text="@string/title_tab_login_visitor"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <View
+            android:id="@+id/view_visitor"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/neutral_50"
+            app:layout_constraintTop_toBottomOf="@+id/tv_tab_visitor"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mt_toolbar_sub_features"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_106sdp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingBottom="@dimen/_16sdp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/title_assalamualaikum"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar" />
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+            app:layout_constraintStart_toStartOf="@+id/tv_hello"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hello"
+            tools:text="Siswa 1" />
+
+        <TextView
+            android:id="@+id/tv_class"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            android:background="@drawable/bg_circle_red"
+            android:paddingStart="@dimen/_16sdp"
+            android:paddingEnd="@dimen/_16sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingBottom="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+            android:text="@string/title_class_of_1st" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.appbar.MaterialToolbar>

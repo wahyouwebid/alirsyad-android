@@ -1,0 +1,156 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:background="@drawable/bg_popup_rounded_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_141sdp"
+            android:layout_height="@dimen/_141sdp"
+            android:background="@drawable/ic_failed_submited"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/title_content_description" />
+
+        <TextView
+            android:id="@+id/tv_title_popup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:textColor="@color/neutral_100"
+            android:textSize="@dimen/_18ssp"
+            android:layout_marginTop="@dimen/_25sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:text="@string/title_oops" />
+
+        <TextView
+            android:id="@+id/tv_your_score_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="@string/title_your_score"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_popup" />
+
+        <TextView
+            android:id="@+id/tv_your_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            android:paddingTop="@dimen/_9sdp"
+            android:paddingBottom="@dimen/_6sdp"
+            android:background="@drawable/bg_rounded_accent_transparent"
+            android:textColor="@color/colorAccentDark"
+            tools:text="1/10"
+            android:textSize="@dimen/_16ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_your_score_label" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="@string/title_submited_failed"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_your_score" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_46sdp"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_button_rounded_disable"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/title_later"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            app:layout_constraintEnd_toStartOf="@+id/btn_submit"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_46sdp"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:paddingTop="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/bg_button_rounded"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/title_btn_error_try_again"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_cancel"/>
+
+        <TextView
+            android:id="@+id/tv_check_the_study"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:padding="@dimen/_16sdp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"
+            android:textColor="@color/colorAccentDark"
+            android:text="@string/title_check_the_study"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_cancel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

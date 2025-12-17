@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.alirsyad.app.component.toolbar.DibToolbarFeatures
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_0sdp"
+            android:paddingBottom="@dimen/_32sdp">
+
+            <TextView
+                android:id="@+id/tv_label_your_achievement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="@dimen/_16ssp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/title_subject_achievement"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_chart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                app:cardElevation="@dimen/_5sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_your_achievement">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                   <LinearLayout
+                       android:id="@+id/ll_legend"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       app:layout_constraintTop_toTopOf="parent">
+
+                       <com.makeramen.roundedimageview.RoundedImageView
+                           android:layout_width="@dimen/_30sdp"
+                           android:layout_height="@dimen/_13sdp"
+                           android:layout_marginStart="@dimen/_16sdp"
+                           android:layout_marginTop="@dimen/_16sdp"
+                           android:layout_marginBottom="@dimen/_16sdp"
+                           app:layout_constraintBottom_toBottomOf="parent"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent"
+                           android:scaleType="fitCenter"
+                           app:riv_mutate_background="true"
+                           android:background="@color/state_color_green"
+                           app:riv_corner_radius="@dimen/_16sdp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="@dimen/_11ssp"
+                           android:layout_marginStart="@dimen/_8sdp"
+                           android:layout_marginTop="@dimen/_1sdp"
+                           android:layout_gravity="center_vertical"
+                           android:fontFamily="@font/poppins_semi_bold"
+                           android:text="@string/title_easy"/>
+
+                       <com.makeramen.roundedimageview.RoundedImageView
+                           android:layout_width="@dimen/_30sdp"
+                           android:layout_height="@dimen/_13sdp"
+                           android:layout_marginStart="@dimen/_16sdp"
+                           android:layout_marginTop="@dimen/_16sdp"
+                           android:layout_marginBottom="@dimen/_16sdp"
+                           app:layout_constraintBottom_toBottomOf="parent"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent"
+                           android:scaleType="fitCenter"
+                           app:riv_mutate_background="true"
+                           android:background="@color/state_color_yellow"
+                           app:riv_corner_radius="@dimen/_16sdp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="@dimen/_11ssp"
+                           android:layout_marginStart="@dimen/_8sdp"
+                           android:layout_marginTop="@dimen/_1sdp"
+                           android:layout_gravity="center_vertical"
+                           android:fontFamily="@font/poppins_semi_bold"
+                           android:text="@string/title_medium"/>
+
+                       <com.makeramen.roundedimageview.RoundedImageView
+                           android:layout_width="@dimen/_30sdp"
+                           android:layout_height="@dimen/_13sdp"
+                           android:layout_marginStart="@dimen/_16sdp"
+                           android:layout_marginTop="@dimen/_16sdp"
+                           android:layout_marginBottom="@dimen/_16sdp"
+                           app:layout_constraintBottom_toBottomOf="parent"
+                           app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent"
+                           android:scaleType="fitCenter"
+                           app:riv_mutate_background="true"
+                           android:background="@color/state_color_red"
+                           app:riv_corner_radius="@dimen/_16sdp" />
+
+                       <TextView
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:textSize="@dimen/_11ssp"
+                           android:layout_marginStart="@dimen/_8sdp"
+                           android:gravity="center_vertical"
+                           android:layout_marginTop="@dimen/_1sdp"
+                           android:layout_gravity="center_vertical"
+                           android:fontFamily="@font/poppins_semi_bold"
+                           android:text="@string/title_hard"/>
+
+                   </LinearLayout>
+
+                   <com.github.mikephil.charting.charts.BarChart
+                       android:id="@+id/chart"
+                       android:layout_width="match_parent"
+                       android:layout_height="300dp"
+                       android:layout_marginBottom="@dimen/_16sdp"
+                       android:layout_marginStart="@dimen/_16sdp"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/ll_legend"/>
+
+                   <com.facebook.shimmer.ShimmerFrameLayout
+                       android:id="@+id/sh_chart"
+                       android:layout_width="match_parent"
+                       android:layout_height="316dp"
+                       app:layout_constraintTop_toTopOf="parent">
+
+                       <include layout="@layout/place_holder_ereport_chart" />
+                   </com.facebook.shimmer.ShimmerFrameLayout>
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_label_your_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="@dimen/_16ssp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:text="@string/title_your_score"
+                app:layout_constraintTop_toBottomOf="@+id/cv_chart"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/tv_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_18sdp"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:text="@string/title_see_all"
+                android:textColor="@color/colorAccentDark"
+                app:layout_constraintTop_toBottomOf="@+id/cv_chart"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_your_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_your_score"/>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/sh_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_your_score">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/place_holder_ereport_current_score" />
+                    <include layout="@layout/place_holder_ereport_current_score" />
+                    <include layout="@layout/place_holder_ereport_current_score" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <com.alirsyad.app.component.customview.DibEmptyState
+                android:id="@+id/dib_empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_your_score"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

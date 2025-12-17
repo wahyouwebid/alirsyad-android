@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".ui.learning.learningmodule.detail.DetailLearningModuleWebviewActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:background="@drawable/ic_toolbar_back"
+                android:backgroundTint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_0sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_back"
+                app:layout_constraintEnd_toStartOf="@+id/iv_more"
+                app:layout_constraintStart_toEndOf="@+id/iv_back"
+                app:layout_constraintTop_toTopOf="@+id/iv_back">
+
+                <TextView
+                    android:id="@+id/tv_title_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="2"
+                    android:fontFamily="@font/light"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14ssp"
+                    tools:text="Pengurangan dan Penjumlahan" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:background="@drawable/ic_more"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.alirsyad.app.utils.RoundedView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:topLeftCornerRadius="@dimen/_35sdp"
+        app:topRightCornerRadius="@dimen/_35sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/pdfView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_0sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_footer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="@dimen/_56sdp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_prev"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/bg_button_rounded"
+                    android:drawableStart="@drawable/ic_baseline_keyboard_arrow_left_24"
+                    android:paddingStart="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@string/title_modul_prev"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_32sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:background="@drawable/bg_button_rounded"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_8sdp"
+                    android:text="@string/title_modul_next"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/view"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/llZoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:padding="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/iv_zoom"
+                    android:layout_width="@dimen/_58sdp"
+                    android:layout_height="@dimen/_58sdp"
+                    android:layout_gravity="center|end"
+                    android:background="@drawable/ic_zoom"
+                    android:gravity="end"
+                    android:scaleType="center" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_hide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_minus10sdp"
+                    app:cardCornerRadius="@dimen/_100sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_hide_zoom"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:src="@drawable/ic_clear"
+                        app:tint="@color/black" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.alirsyad.app.utils.RoundedView>
+</androidx.constraintlayout.widget.ConstraintLayout>

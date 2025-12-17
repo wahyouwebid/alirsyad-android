@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:paddingTop="@dimen/_20sdp"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"
+        app:riv_corner_radius="@dimen/_5sdp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="@dimen/_0sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center_vertical"
+        android:text="BAB 1 : Diriku"
+        android:textColor="@color/neutral_90"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/iv_thumbnail" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="@dimen/_0sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center_vertical"
+        android:text="Jumat, 01 Sept 2022"
+        android:textColor="@color/neutral_60"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_thumbnail"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"/>
+
+    <TextView
+        android:id="@+id/tv_label_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/title_your_score"
+        android:textColor="@color/neutral_70"
+        android:textSize="@dimen/_12ssp"
+        android:layout_marginStart="@dimen/_16sdp"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumbnail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
+
+    <TextView
+        android:id="@+id/tv_progress_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_extra_bold"
+        android:textColor="@color/colorAccentDark"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_label_progress"
+        app:layout_constraintEnd_toEndOf="@+id/pb_progress"
+        app:layout_constraintTop_toTopOf="@+id/tv_label_progress"
+        tools:text="20/100" />
+
+    <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+        android:id="@+id/pb_progress"
+        android:layout_width="@dimen/_0sdp"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_label_progress"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label_progress"
+        app:rcAnimationEnable="true"
+        app:rcAnimationSpeedScale="1"
+        app:rcBackgroundPadding="@dimen/_1sdp"
+        app:rcBackgroundColor="@color/state_color_orange_light"
+        app:rcMax="100"
+        app:rcProgress="0"
+        app:rcProgressColor="@color/state_color_orange"
+        app:rcRadius="@dimen/_30sdp" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:background="@color/grey_10"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/pb_progress"
+        app:layout_constraintStart_toStartOf="@+id/tv_title"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

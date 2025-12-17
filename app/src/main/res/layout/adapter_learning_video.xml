@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingTop="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/iv_thumbnail"
+        android:layout_width="@dimen/_63sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8sdp" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="@dimen/_63sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:src="@color/neutral_80"
+        android:alpha="0.2"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="@dimen/_16sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/_8sdp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/ic_play_subject"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_thumbnail"
+        app:layout_constraintEnd_toEndOf="@+id/iv_thumbnail"
+        app:layout_constraintStart_toStartOf="@+id/iv_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/iv_thumbnail"
+        android:contentDescription="@string/title_content_description"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="@dimen/_0sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/neutral_90"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_thumbnail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_thumbnail"
+        app:layout_constraintTop_toTopOf="@+id/iv_thumbnail"
+        tools:text="1.1 Menjelaskan makna bilangan cacah" />
+
+    <View
+        android:id="@+id/view_stroke"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/neutral_30"
+        android:layout_marginStart="@dimen/_82sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_thumbnail"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

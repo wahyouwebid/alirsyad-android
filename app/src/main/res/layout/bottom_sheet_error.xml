@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mt_toolbar_sub_features"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="@drawable/bg_white_top_rounded"
+    android:paddingTop="@dimen/_16sdp"
+    android:paddingStart="@dimen/_16sdp"
+    android:paddingEnd="@dimen/_16sdp"
+    android:paddingBottom="@dimen/_24sdp">
+
+    <com.alirsyad.app.utils.RoundedView
+        android:id="@+id/view_stroke"
+        android:layout_width="@dimen/_38sdp"
+        android:layout_height="@dimen/_6sdp"
+        app:bottomLeftCornerRadius="@dimen/_50sdp"
+        app:bottomRightCornerRadius="@dimen/_50sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:topLeftCornerRadius="@dimen/_50sdp"
+        app:topRightCornerRadius="@dimen/_50sdp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/neutral_30" />
+    </com.alirsyad.app.utils.RoundedView>
+
+    <ImageView
+        android:id="@+id/iv_error"
+        android:layout_width="@dimen/_190sdp"
+        android:layout_height="@dimen/_185sdp"
+        android:background="@drawable/ic_error_connection"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_stroke"
+        android:contentDescription="@string/title_content_description" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="@dimen/_16ssp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_error"
+        android:text="@string/title_error_login_failed"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:gravity="center_horizontal"
+        android:fontFamily="@font/poppins_regular"
+        android:textSize="@dimen/_14ssp"
+        android:textColor="@color/neutral_80"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        android:text="@string/title_error_waiting_reset_password_message"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_cancel"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="@dimen/_53sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/bg_button_rounded_white"
+        android:text="@string/title_btn_error_try_again"
+        android:fontFamily="@font/poppins_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message"
+        app:layout_constraintEnd_toStartOf="@+id/btn_ok"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_ok"
+        android:layout_width="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_height="@dimen/_53sdp"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_50sdp"
+        android:background="@drawable/bg_button_rounded"
+        android:text="@string/title_btn_error_go_to_settings"
+        android:fontFamily="@font/poppins_bold"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_cancel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

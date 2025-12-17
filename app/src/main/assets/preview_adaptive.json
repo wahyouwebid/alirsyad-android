@@ -1,0 +1,80 @@
+{
+   "success":true,
+   "message":"Successfull",
+   "data":{
+      "paket_soal_id":6,
+      "tingkat_kesulitan":"mudah",
+      "list_soal":[
+         {
+            "id":143,
+            "soal":"Bu Dina memiliki 13 sepatu untuk dijual, lalu 8 buah sepatu laris dijualnya. Berapa sisa sepatu yang harus dijual bu Dina?",
+            "image":"",
+            "jawaban":[
+               "5 buah",
+               "8 buah",
+               "6 buah",
+               "4 buah",
+               "7 buah"
+            ],
+            "jawaban_siswa":"5 buah",
+            "jawaban_benar":"8 buah",
+            "is_correct": false,
+            "pembahasan_text":"Karna ikan memiliki yang berfungsi yang tidak jauh berbeda dengan paru-paru yang digunakan makhluk hidup di darat. Dengan menggunakan insang, ikan akan menyerap oksigen dan melepaskan karbon dioksida dari tubuh. Walau sama-sama mengunakan oksigen untuk bernapas, ikan membutuhkan usaha lebih untuk mendapatkannya.",
+            "pembahasan_video": null
+         },
+         {
+            "id":144,
+            "soal":"Lina membeli mobil dengan harga 150 juta, dia membeli aksesoris seperti Diffuser, velg dengan harga 10 juta, berapa total pengeluaran lina ?",
+            "image":"",
+            "jawaban":[
+               "160 Juta",
+               "120 Juta",
+               "110 Juta",
+               "100 Juta",
+               "170 Juta"
+            ],
+            "jawaban_siswa":"170 Juta",
+            "jawaban_benar":"160 Juta",
+            "is_correct":false,
+            "pembahasan_text":"Karna ikan memiliki yang berfungsi yang tidak jauh berbeda dengan paru-paru yang digunakan makhluk hidup di darat. Dengan menggunakan insang, ikan akan menyerap oksigen dan melepaskan karbon dioksida dari tubuh. Walau sama-sama mengunakan oksigen untuk bernapas, ikan membutuhkan usaha lebih untuk mendapatkannya.",
+            "pembahasan_video": null
+         },
+
+         {
+            "id":146,
+            "soal":"Manakah dari gambar dibawah ini yang berbentuk gajah ?",
+            "image":"",
+            "jawaban":[
+               "https://image.gambarpng.id/pngs/gambar-transparent-elephant-cartoon_40021.png",
+               "https://w7.pngwing.com/pngs/598/4/png-transparent-lovely-cartoon-elephant-material-03-thumbnail.png",
+               "https://i.pinimg.com/736x/c0/5b/03/c05b0328c3e06591788dfaa29ca70c61.jpg",
+               "https://image.gambarpng.id/pngs/gambar-transparent-elephant-cartoon_40021.png",
+               "https://1.bp.blogspot.com/-oQx7h8GOC9o/U0oLGvovh1I/AAAAAAAAAME/-S4gxzcf3TY/s1600/gambar+kartun+gajah.jpg"
+            ],
+            "jawaban_siswa":"https://image.gambarpng.id/pngs/gambar-transparent-elephant-cartoon_40021.png",
+            "jawaban_benar":"https://1.bp.blogspot.com/-oQx7h8GOC9o/U0oLGvovh1I/AAAAAAAAAME/-S4gxzcf3TY/s1600/gambar+kartun+gajah.jpg",
+            "is_correct":false,
+            "pembahasan_text": null,
+            "pembahasan_video":"BFzpswX9iRg"
+         },
+
+         {
+            "id":112,
+            "soal":"Manakah dibawah ini yang merupakan bilangan genap?",
+            "image":"",
+            "jawaban":[
+               "10",
+               "11",
+               "13",
+               "9",
+               "21"
+            ],
+            "jawaban_siswa":"10",
+            "jawaban_benar":"10",
+            "is_correct":true,
+            "pembahasan_text": null,
+            "pembahasan_video":"BFzpswX9iRg"
+         }
+      ]
+   }
+}

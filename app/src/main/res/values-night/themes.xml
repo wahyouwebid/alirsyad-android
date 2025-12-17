@@ -1,0 +1,79 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DigitalInteractiveBook" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorSecondary">@color/colorPrimary</item>
+        <item name="colorSecondaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/backgroundColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/regular</item>
+        <item name="cardBackgroundColor">@color/black_light</item>
+        <item name="strokeColor">@color/black_light</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.DayNight.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="strokeColor">
+        <item name="android:background">@color/black_light</item>
+    </style>
+
+    <style name="cardWithStroke">
+        <item name="android:background">@drawable/bg_card_white_stroke_light</item>
+    </style>
+
+    <style name="searchStroke">
+        <item name="android:background">@drawable/bg_search_rounded_light</item>
+    </style>
+
+    <style name="editTextStroke">
+        <item name="android:background">@drawable/bg_edit_text_dark</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:background">@drawable/bg_white_top_rounded</item>
+    </style>
+
+    <style name="ThemeOverlay.DigitalInteractiveBook.FullscreenContainer" parent="">
+        <item name="fullscreenBackgroundColor">@color/light_blue_900</item>
+        <item name="fullscreenTextColor">@color/light_blue_A400</item>
+    </style>
+
+    <style name="BottomNavigationView">
+        <item name="colorControlHighlight">@android:color/transparent</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.BottomNavigationView.Active
+        </item>
+        <item name="itemTextAppearanceInactive">
+            @style/TextAppearance.BottomNavigationView.Inactive
+        </item>
+    </style>
+
+    <!-- blank styles for better code readability-->
+    <style name="TextAppearance" />
+
+    <style name="TextAppearance.BottomNavigationView" />
+
+    <!-- inactive tab icon style -->
+    <style name="TextAppearance.BottomNavigationView.Inactive">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- active tab icon style -->
+    <style name="TextAppearance.BottomNavigationView.Active">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+</resources>

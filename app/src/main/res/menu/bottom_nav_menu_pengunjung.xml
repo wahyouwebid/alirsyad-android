@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_home"
+        android:enabled="true"
+        android:title="@string/title_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        app:cnb_iconColor="@color/colorPrimary"/>
+    <item
+        android:id="@+id/menu_courses"
+        android:enabled="true"
+        android:title="@string/title_courses"
+        android:icon="@drawable/ic_courses"
+        app:cnb_iconColor="@color/colorPrimary"/>
+
+    <item
+        android:id="@+id/menu_account"
+        android:enabled="true"
+        android:title="@string/title_account"
+        android:icon="@drawable/ic_account"
+        app:cnb_iconColor="@color/colorPrimary"/>
+</menu>

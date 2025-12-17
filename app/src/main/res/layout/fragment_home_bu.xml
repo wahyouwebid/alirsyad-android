@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.bu.home.HomeFragment">
+
+    <com.alirsyad.app.component.toolbar.DibToolbarHome
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_home"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0sdp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/_16sdp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/vp_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_220sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dots_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    app:dotsColor="@color/neutral_20"
+                    app:dotsCornerRadius="@dimen/_8sdp"
+                    app:dotsSize="@dimen/_8sdp"
+                    app:dotsSpacing="@dimen/_2sdp"
+                    app:dotsWidthFactor="2.5"
+                    android:layout_marginTop="-42dp"
+                    app:progressMode="false"
+                    app:selectedDotColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="@dimen/_18sdp"
+                    android:layout_marginBottom="@dimen/_24sdp"
+                    app:layout_constraintTop_toBottomOf="@id/vp_banner" />
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/sh_home_carousel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <include layout="@layout/place_holder_banner_home" />
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cv_achievement"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_75sdp"
+                    android:layout_marginTop="-24dp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_16sdp"
+                    app:layout_constraintTop_toBottomOf="@+id/vp_banner">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/iv_achieve"
+                            android:layout_width="@dimen/_35sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:background="@drawable/ic_piala"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            android:contentDescription="@string/title_image"/>
+
+                        <TextView
+                            android:id="@+id/tv_label_your_achievement"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/title_your_achievement"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center_vertical"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:textColor="@color/neutral_100"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            app:layout_constraintStart_toEndOf="@+id/iv_achieve"
+                            app:layout_constraintTop_toTopOf="@+id/iv_achieve"
+                            app:drawableEndCompat="@drawable/ic_information_12"
+                            app:drawableTint="@color/neutral_60" />
+
+                        <TextView
+                            android:id="@+id/tv_result_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="@dimen/_4sdp"
+                            android:textColor="@color/colorAccentDark"
+                            android:fontFamily="@font/poppins_bold"
+                            android:gravity="center_vertical"
+                            android:text="4/100"
+                            app:layout_constraintEnd_toEndOf="@+id/roundCornerProgressBar"
+                            app:layout_constraintTop_toTopOf="@+id/iv_achieve" />
+
+                        <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+                            android:id="@+id/roundCornerProgressBar"
+                            android:layout_width="0dp"
+                            android:layout_height="10dp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/iv_achieve"
+                            app:layout_constraintTop_toBottomOf="@+id/tv_label_your_achievement"
+                            app:rcBackgroundColor="@color/neutral_30"
+                            app:rcMax="100"
+                            app:rcProgress="50"
+                            app:rcProgressColors="@array/progressBar"
+                            app:rcRadius="30dp" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/cv_achievement"
+                    tools:layout_editor_absoluteX="@dimen/_0sdp">
+
+                    <TextView
+                        android:id="@+id/tv_all_subject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="@dimen/_16ssp"
+                        android:layout_marginTop="@dimen/_24sdp"
+                        android:text="@string/title_subject_of_class"/>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_all_subjects_carousel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            android:paddingEnd="@dimen/_20sdp"
+                            android:paddingStart="0dp"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"/>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/sh_all_subjects_carousel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <include layout="@layout/place_holder_subject_class" />
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/empty_all_subjects_carousel"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/empty" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_course_in_progress"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_236sdp"
+                                android:layout_marginLeft="@dimen/_16sdp"
+                                android:layout_marginTop="@dimen/_16sdp"
+                                android:layout_marginRight="@dimen/_16sdp"
+                                android:layout_marginBottom="@dimen/_16sdp"
+                                app:cardCornerRadius="@dimen/_15sdp"
+                                app:cardElevation="@dimen/_5sdp"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent">
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rv_course_in_progress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clipToPadding="false"
+                                    android:paddingStart="0dp"
+                                    android:paddingEnd="@dimen/_16sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:layout_gravity="center"
+                                    android:gravity="center" />
+
+                            </androidx.cardview.widget.CardView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/sh_course_in_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:layout_marginBottom="@dimen/_16sdp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent">
+
+                            <include layout="@layout/place_holder_course" />
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/empty_course_in_progress"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/empty" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tv_label_update_subject"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textSize="@dimen/_16ssp"
+                            android:layout_marginTop="@dimen/_16sdp"
+                            android:text="@string/title_updated_subject"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                        <TextView
+                            android:id="@+id/tv_view_more_update"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textColor="@color/colorAccentDark"
+                            android:textSize="@dimen/_14ssp"
+                            android:layout_marginTop="@dimen/_24sdp"
+                            android:text="@string/title_see_all"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rv_new_update_carousel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:paddingEnd="@dimen/_20sdp"
+                        android:paddingStart="0dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/sh_new_update_carousel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:paddingBottom="@dimen/_8sdp">
+
+                        <include layout="@layout/place_holder_subject_update" />
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/empty_new_update_carousel"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/empty" />
+
+                    <ImageView
+                        android:id="@+id/empty_new_update_carousel_visitor"
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_150sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:adjustViewBounds="true"
+                        android:visibility="gone"
+                        android:contentDescription="@string/title_image"
+                        android:src="@drawable/empty_update_pengunjung_khusus"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
