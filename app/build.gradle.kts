@@ -30,12 +30,10 @@ android {
                     "proguard-rules.pro"
             )
             buildConfigField("String", "baseUrl", "\"https://dib.alirsyadbandung.sch.id/api/\"")
-            buildConfigField("String", "imageUrl", "\"https://dib.alirsyadbandung.sch.id/\"")
         }
 
         getByName("debug") {
             buildConfigField("String", "baseUrl", "\"https://dib.alirsyadbandung.sch.id/api/\"")
-            buildConfigField("String", "imageUrl", "\"https://dib.alirsyadbandung.sch.id/\"")
         }
     }
 

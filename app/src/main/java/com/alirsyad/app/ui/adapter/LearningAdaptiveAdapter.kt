@@ -39,7 +39,7 @@ class LearningAdaptiveAdapter(
             val item = data[position]
             tvTitle.text = item.name
             Glide.with(ivThumbnail)
-                .load(BuildConfig.imageUrl + item.icon)
+                .load(item.icon)
                 .into(ivThumbnail)
             root.setOnClickListener {
                 elQuestion.toggle()

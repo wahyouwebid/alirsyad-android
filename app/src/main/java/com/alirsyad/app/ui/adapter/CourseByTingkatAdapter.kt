@@ -28,7 +28,7 @@ class CourseByTingkatAdapter(
             val item = data[position]
             tvTitle.text = item.name
             tvDescription.text = "Kelas ${item.tingkat?.name} $jenjang"
-            ivThumbnail.load(BuildConfig.imageUrl + item.icon)
+            ivThumbnail.load(item.icon)
             btnContinue.setOnClickListener {
                 showDetail(data[position])
             }

@@ -27,7 +27,7 @@ class BannerAdapter : RecyclerView.Adapter<BannerAdapter.ViewHolder>() {
         with(holder.view) {
             val item = data[position]
             Glide.with(ivBanner)
-                .load(BuildConfig.imageUrl + item.image)
+                .load(item.image)
                 .fitCenter()
                 .diskCacheStrategy(DiskCacheStrategy.DATA)
                 .into(ivBanner)

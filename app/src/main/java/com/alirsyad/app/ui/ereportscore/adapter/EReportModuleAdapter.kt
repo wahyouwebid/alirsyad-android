@@ -33,7 +33,7 @@ class EReportModuleAdapter(
             val item = data[position]
             tvTitle.text = item.nama
             Glide.with(ivThumbnail)
-                .load(BuildConfig.imageUrl + item.icon)
+                .load(item.icon)
                 .error(R.drawable.bg_placeholder)
                 .into(ivThumbnail)
             root.setOnClickListener {

@@ -26,7 +26,7 @@ class SubjectCourseAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.view) {
             val item = data[position]
-            ivIcon.load(BuildConfig.imageUrl + item.icon) {
+            ivIcon.load(item.icon) {
                 placeholder(R.drawable.bg_placeholder_square_menu)
                 error(R.drawable.bg_placeholder_square_menu)
             }

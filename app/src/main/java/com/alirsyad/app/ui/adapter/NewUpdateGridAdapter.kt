@@ -31,7 +31,7 @@ class NewUpdateGridAdapter(
             val item = data[position]
             tvModule.text = item.triggerName
             Glide.with(ivModule)
-                .load(BuildConfig.imageUrl + item.logo)
+                .load(item.logo)
                 .error(R.drawable.ic_subject_module)
                 .fitCenter()
                 .into(ivModule)

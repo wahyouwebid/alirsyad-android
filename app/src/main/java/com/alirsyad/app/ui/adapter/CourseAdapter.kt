@@ -28,7 +28,7 @@ class CourseAdapter(
             tvTitle.text = item.name
             tvDescription.text = "Kelas ${item.tingkat?.id} ${item.tingkat?.jenjang?.name}"
             Glide.with(ivThumbnail)
-                .load(BuildConfig.imageUrl + item.icon)
+                .load(item.icon)
                 .into(ivThumbnail)
             btnContinue.setOnClickListener {
                 showDetail(data[position])

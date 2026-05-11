@@ -44,7 +44,7 @@ class LearningSimulationAdapter(
                 tvLabelYourScore.hide(true)
             }
             Glide.with(ivThumbnail)
-                .load(BuildConfig.imageUrl + item.icon)
+                .load(item.icon)
                 .into(ivThumbnail)
             if (isPengunjung == 1) {
                 if (item.mapelAssigned == 1) {

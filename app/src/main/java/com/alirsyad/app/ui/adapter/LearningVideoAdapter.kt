@@ -32,7 +32,7 @@ class LearningVideoAdapter(
         with(holder.view) {
             val item = data[position]
             tvTitle.text = item.name
-            val url = BuildConfig.imageUrl + item.icon
+            val url = item.icon
             Picasso.get().load(url).into(ivThumbnail)
             if (isPengunjung == 1) {
                 if (item.mapelAssigned == 1) {

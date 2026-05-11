@@ -37,7 +37,7 @@ class EReportAdapter(
             tvLevel.getLevel(item.tingkatKesulitan)
 
             Glide.with(ivSubject)
-                .load(BuildConfig.imageUrl + item.mataPelajaranIcon)
+                .load(item.mataPelajaranIcon)
                 .error(R.drawable.bg_placeholder)
                 .into(ivSubject)
 

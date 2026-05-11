@@ -30,7 +30,7 @@ class SimulationContentAdapter(
             tvDate.text = dateFormat(item.createdAt)
             tvRating.text = "${item.rataRataScore}/100"
             rating.rating = item.bintangScore
-            ivThumbnail.load(BuildConfig.imageUrl + item.icon)
+            ivThumbnail.load(item.icon)
             root.setOnClickListener {
                 showDetail(data[position])
             }

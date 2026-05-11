@@ -208,7 +208,7 @@ class DetailLearningModuleActivity : AppCompatActivity() {
         dataModule = data
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val input = URL(BuildConfig.imageUrl + data.pdfPath).openStream()
+                val input = URL(data.pdfPath).openStream()
                 binding.pdfView.fromStream(input)
                     .swipeHorizontal(false)
                     .enableAnnotationRendering(true)
@@ -330,7 +330,7 @@ class DetailLearningModuleActivity : AppCompatActivity() {
     }
 
     private fun printModulePdf() {
-        val url = BuildConfig.imageUrl + dataModule?.pdfPath
+        val url = dataModule?.pdfPath
         val request = DownloadManager.Request(Uri.parse(url))
             .setTitle("${dataModule?.name}.pdf")
             .setDescription("Downloading ${dataModule?.name}.pdf")
@@ -347,7 +347,7 @@ class DetailLearningModuleActivity : AppCompatActivity() {
     }
 
     private fun downloadModulePdf() {
-        val url = BuildConfig.imageUrl + dataModule?.pdfPath
+        val url = dataModule?.pdfPath
         val request = DownloadManager.Request(Uri.parse(url))
             .setTitle("${dataModule?.name}.pdf")
             .setDescription("Downloading ${dataModule?.name}.pdf")

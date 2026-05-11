@@ -25,7 +25,7 @@ class CourseUpComingAdapter : RecyclerView.Adapter<CourseUpComingAdapter.ViewHol
             val item = data[position]
             tvTitle.text = item.name
             tvDescription.text = "Kelas ${item.tingkat?.name} ${item.tingkat?.jenjang?.name}"
-            ivThumbnail.load(BuildConfig.imageUrl + item.icon)
+            ivThumbnail.load(item.icon)
         }
     }
 

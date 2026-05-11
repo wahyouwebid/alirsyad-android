@@ -43,7 +43,7 @@ class PdfViewActivity : AppCompatActivity() {
     private fun setupLoadPdf() {
         CoroutineScope(Dispatchers.IO).launch {
             try {
-                val input = URL(BuildConfig.imageUrl + url).openStream()
+                val input = URL(url).openStream()
                 binding.pdfView.fromStream(input)
                     .swipeHorizontal(false)
                     .enableAnnotationRendering(true)
