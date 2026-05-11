@@ -1,6 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: org.jetbrains.kotlin:kotlin-parcelize-runtime:2.0.21" type="java-imported" external-system-id="GRADLE">
-    <properties groupId="org.jetbrains.kotlin" artifactId="kotlin-parcelize-runtime" version="2.0.21" />
+    <properties groupId="org.jetbrains.kotlin" artifactId="kotlin-parcelize-runtime" version="2.0.21" baseVersion="2.0.21" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-parcelize-runtime/2.0.21/8947a70750a8552acfe84ad5703e16bf072d9368/kotlin-parcelize-runtime-2.0.21.jar!/" />
     </CLASSES>

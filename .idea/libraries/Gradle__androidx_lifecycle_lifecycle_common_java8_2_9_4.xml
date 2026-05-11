@@ -1,6 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-common-java8:2.9.4" type="java-imported" external-system-id="GRADLE">
-    <properties groupId="androidx.lifecycle" artifactId="lifecycle-common-java8" version="2.9.4" />
+    <properties groupId="androidx.lifecycle" artifactId="lifecycle-common-java8" version="2.9.4" baseVersion="2.9.4" />
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.9.4/86a8e6b9d0ba0c964fdc7223a38b6ce74bcb24dd/lifecycle-common-java8-2.9.4.jar!/" />
     </CLASSES>
